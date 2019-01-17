@@ -1,26 +1,14 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: yforeau <yforeau@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/12/20 03:24:53 by yforeau           #+#    #+#              #
-#    Updated: 2018/12/20 17:31:55 by yforeau          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 ############################## COMPILE VAR #####################################
 
 CC			=	gcc
-CFLAGS		=	-O -Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror
+#CFLAGS		=	-g
 HDIR		=	includes
+SRCDIR		=	src
 HFLAGS		=	-I $(HDIR)
 NAME		=	libftprintf.a
 
 ############################## SOURCES #########################################
-
-SRCDIR			=	src
 
 BINTDIR			=	bint
 FT_PRINTFDIR	=	ft_printf
@@ -44,6 +32,7 @@ FT_PRINTFC		=	basic_conversions.c\
 					format_data.c\
 					format_int_data.c\
 					ft_printf.c\
+					ft_printf_utils.c\
 					get_conv.c\
 					get_flags.c\
 					itoa.c\
@@ -54,7 +43,6 @@ FT_PRINTFC		=	basic_conversions.c\
 					t_pdata.c\
 					tab_conversion.c\
 					uni_conversions.c\
-					utils.c\
 
 LIBFTC			=	ft_atoi_forward.c\
 					ft_memchr.c\
@@ -96,7 +84,7 @@ convert.o: conversions.h t_farg.h t_pdata.h t_params.h format_data.h libft.h
 efg_conversions.o: fetch.h t_farg.h t_params.h log_and_ceil.h float_formats.h\
 	t_pdata.h dragon4.h
 fetch.o: fetch.h t_farg.h t_params.h
-float_formats.o: utils.h t_pdata.h dragon4.h t_params.h
+float_formats.o: ft_printf_utils.h t_pdata.h dragon4.h t_params.h
 format_data.o: format_data.h t_params.h t_pdata.h format_int_data.h libft.h
 format_int_data.o: format_int_data.h t_pdata.h t_params.h format_data.h\
 	libft.h
