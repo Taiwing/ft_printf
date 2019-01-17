@@ -1,0 +1,9 @@
+# ft_printf
+
+Implementation of printf funcions in C.
+
+DEVELOPEMENT INFOS: This project is a light-weight version of ft_printf without
+the full libft. The libft funcitons needed for ft_printf are located in
+src/libft C files with "libft.h" as its header. There is an other version of
+ft_printf in libft, that probably will be more up to date than this one. This
+one should be updated with the libft version each time it is used.
