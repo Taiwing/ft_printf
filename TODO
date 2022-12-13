@@ -1,0 +1,8 @@
+---- TODO ----
+
+- add more specific descriptions of binary and table conversions with examples
+  in the README file
+- update this repo with the libft's latest version of ft_printf
+- add a section in the README about the different available versions of the
+  ft_printf function with specific use cases each time
+- add a section about the implementation of dragon4 for the floats (shiiiii)
